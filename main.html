@@ -18,6 +18,11 @@
 					uniqueArr.push(i);
 				}
 			}
+			uniqueArr.sort()
+			const isAllNegative = uniqueArr.every(el => el < 0);
+			if(isAllNegative){
+				return  uniqueArr[1]
+			}
 			const secondLastEle = uniqueArr[uniqueArr.length-2]
 			return secondLastEle;
 		}
